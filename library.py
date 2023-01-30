@@ -43,12 +43,10 @@ class Library(BaseModel):
     books: Optional[list] = []
 
     def get_next_book_id(self):
-        last_book_id = len(self.books) - 1
-        if last_book_id <= 0:
-            next_book_id = 1
+                if self.books == []:
+            return 1
         else:
-            next_book_id = self.books[last_book_id]._id + 1
-        return next_book_id
+            return self.books[-1]._id +1
 
     def get_index_by_book_id(self, book_id: int):
         if not isinstance(book_id, int):
