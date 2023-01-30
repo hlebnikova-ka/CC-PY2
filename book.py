@@ -14,6 +14,12 @@ BOOKS_DATABASE = [
 
 class Book:
     def __init__(self, _id: int, name: str, pages: int):
+        """
+        Создание и подготовка к работе объекта "Книга"
+        :param _id: Идентификатор книги
+        :param name: Название книги
+        :param pages: Кол-во страниц в книге
+        """
         if not isinstance(_id, int):
             raise TypeError("Введите целое число в поле id")
         self._id = _id
