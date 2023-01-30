@@ -39,7 +39,8 @@ class Book:
 
 
 
-class Library(BaseModel):
+class Library(BaseModel):  # Library унаследован от BaseModel
+    """ Класс, описывающий объект Библиотека, который будет использоваться для книг, которые хранятся в библиотеке. """
     books: Optional[list] = []
 
     def get_next_book_id(self):
